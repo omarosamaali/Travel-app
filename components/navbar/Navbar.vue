@@ -5,14 +5,14 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 const seen = ref(false)
-const currentLanguage = ref('en') // البداية باللغة العربية
+const currentLanguage = ref('en')
 
 const egFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png'
 const ukFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/1024px-Flag_of_Egypt.svg.png'
 
 function switchLanguage(lang) {
     currentLanguage.value = lang
-    locale.value = lang  // تحديث لغة التطبيق فعلياً
+    locale.value = lang 
     seen.value = false
 }
 </script>
