@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', iso: 'en-US', file: 'en.json', dir: 'ltr' },
       { code: 'ar', name: 'Arabic', iso: 'ar-SA', file: 'ar.json', dir: 'rtl' }
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'ar',
     lazy: true,
     langDir: 'lang/',
     vueI18n: 'en', 
