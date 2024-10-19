@@ -12,9 +12,9 @@
             </div>
             <div class="contianer-info mx-auto py-32 sm:py-36 lg:py-48">
                 <div class="text-center">
-                    <h1 class="h1-add-font-family rtl:leading-[1.1]	text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] rtl:pb-5 pb-8">
+                    <h1 class="h1-add-font-family leading-[1.1]	text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] rtl:pb-5 pb-8">
                         {{ $t('Discover Our Paradise Worlds,') }}</h1>
-                    <h1 class="h1-add-font-family rtl:leading-[1.1] text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] pb-5">
+                    <h1 class="h1-add-font-family leading-[1.1] text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] pb-5">
                         {{ $t('Travel Anywhere Now!') }}</h1>
 
                 </div>
