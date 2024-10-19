@@ -1,4 +1,3 @@
-
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -6,19 +5,18 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 const seen = ref(false)
-const currentLanguage = ref('ar')
+const currentLanguage = ref('en') // البداية باللغة العربية
 
-const ukFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png'
-const egFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/1024px-Flag_of_Egypt.svg.png'
+const egFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png'
+const ukFlag = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/1024px-Flag_of_Egypt.svg.png'
 
 function switchLanguage(lang) {
     currentLanguage.value = lang
-    locale.value = lang 
+    locale.value = lang  // تحديث لغة التطبيق فعلياً
     seen.value = false
 }
-
-
 </script>
+
 <template>
     <nav class="bg-[#f3f7fc] fixed w-full top-0 start-0 z-50">
         <div
@@ -53,7 +51,7 @@ function switchLanguage(lang) {
                         <div @click="seen = !seen"
                             class="w-[56px] flex select bg-white border-none  text-[#7C8DB0] text-sm rounded-lg focus:ring-0 focus:border-0 gap-2 block w-full p-2.5 cursor-pointer dropbtn flex justify-center items-center">
                             <img :src="currentLanguage === 'en' ? ukFlag : egFlag" class="w-[18px] h-[18px] mr-2">
-                            <span>{{ currentLanguage === 'en' ? 'En' : 'Ar' }}</span>
+                            <span>{{ currentLanguage === 'en' ? 'Ar' : 'En' }}</span>
                             <i class="hidden lg:block fas fa-chevron-down text-[11px] text-black font-bold"></i>
                         </div>
 
@@ -62,14 +60,14 @@ function switchLanguage(lang) {
                             <button @click="switchLanguage('en')"
                                 class="w-full gap-2 justify-center flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px]  hover:bg-gray-100">
                                 <img :src="ukFlag" class="w-[18px] h-[18px] mr-2">
-                                En
+                                Ar
                             </button>
                             <div class="h-[1px] w-full bg-[#88909917]"></div>
 
                             <button @click="switchLanguage('ar')"
                                 class="w-full gap-2 justify-center flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px]  hover:bg-gray-100">
                                 <img :src="egFlag" class="w-[18px] h-[18px] mr-2">
-                                Ar
+                                En
                             </button>
                             <div class="h-[1px] w-full bg-[#88909917]"></div>
                         </div>
