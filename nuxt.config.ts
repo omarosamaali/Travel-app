@@ -4,16 +4,14 @@ export default defineNuxtConfig({
   ],
   i18n: {
     locales: [
-      { code: 'en', name: 'English', iso: 'en-US', file: 'en.json', dir: 'ltr' },
-      { code: 'ar', name: 'Arabic', iso: 'ar-SA', file: 'ar.json', dir: 'rtl' }
+      { code: 'ar', name: 'English', iso: 'en-US', file: 'en.json', dir: 'rtl' },
+      { code: 'en', name: 'Arabic', iso: 'ar-SA', file: 'ar.json', dir: 'ltr' }
     ],
     defaultLocale: 'ar',
     lazy: true,
     langDir: 'lang/',
-    vueI18n: 'en', 
-    
+    vueI18n: './i18n.ts' // تحديد مسار ملف التهيئة
   },
-
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   app: {
