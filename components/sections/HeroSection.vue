@@ -245,6 +245,6 @@ const selectOption = (option) => {
 
 @media (max-width:805px) {
     .container-section {
-        height: 240px;
+        height: 205px;
     }
 }</style>
