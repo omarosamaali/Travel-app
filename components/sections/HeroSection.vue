@@ -12,9 +12,11 @@
             </div>
             <div class="contianer-info mx-auto py-32 sm:py-36 lg:py-48">
                 <div class="text-center">
-                    <h1 class="h1-add-font-family leading-[1.1]	text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] rtl:pb-5 pb-8">
+                    <h1
+                        class="h1-add-font-family leading-[1.1]	text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] rtl:pb-5 pb-8">
                         {{ $t('Discover Our Paradise Worlds,') }}</h1>
-                    <h1 class="h1-add-font-family leading-[1.1] text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] pb-5">
+                    <h1
+                        class="h1-add-font-family leading-[1.1] text-4xl font-bold w-fit-content text-transparent  sm:text-[56px] pb-5">
                         {{ $t('Travel Anywhere Now!') }}</h1>
 
                 </div>
@@ -28,7 +30,8 @@
         <div class="hidden sm:flex  justify-center gap-10 items-center mb-4 w-[319px] h-[32px] m-auto">
             <label class="inline-flex items-center">
                 <input type="radio" class="custom-radio" name="tripType" value="one-way">
-                <span class="rtl:mr-2 ml-2 font-semibold	text-[#333333] focus:outline-none focus:ring-0">{{ $t('One Way') }}</span>
+                <span class="rtl:mr-2 ml-2 font-semibold	text-[#333333] focus:outline-none focus:ring-0">{{ $t('One Way')
+                }}</span>
             </label>
             <label class="inline-flex items-center">
                 <input type="radio" class="custom-radio" name="tripType" value="round-trip" checked>
@@ -74,7 +77,7 @@
                 </div>
                 <input type="date"
                     class="border-0 font-light text-[15px] text-[#7C8DB0] mt-3 focus:border-0 focus:outline-0 uppercase"
-                   placeholder="DD/MM/YYYY">
+                    placeholder="DD/MM/YYYY">
 
             </div>
             <div>
@@ -82,11 +85,11 @@
                     <img src="../../public/img/depart.png" class="w-[26.63px] h-[23.23px]" alt="">
                     <label class="font-bold text-[#333333]">{{ $t('Return') }}</label>
                 </div>
-                    <input type="date"
-                        class="border-0 font-light text-[15px] text-[#7C8DB0] mt-3 focus:border-0 focus:outline-0 uppercase"
-                     placeholder="DD/MM/YYYY">
+                <input type="date"
+                    class="border-0 font-light text-[15px] text-[#7C8DB0] mt-3 focus:border-0 focus:outline-0 uppercase"
+                    placeholder="DD/MM/YYYY">
 
-                </div>
+            </div>
 
             <div>
                 <div class="flex items-center gap-2 mb-.5">
@@ -94,40 +97,40 @@
                     <label class="font-bold text-[#333333] whitespace-nowrap">{{ $t('Cabin Class & Travelers') }}</label>
                 </div>
 
-                    <form class="max-w-sm mx-0 sm:mx-auto">
+                <div class="max-w-sm mx-0 sm:mx-auto">
 
-                        <div class="dropdown relative">
-                            <div @click="seen = !seen"
-                                class="select bg-white border-none mt-[26px] text-[#7C8DB0] text-sm rounded-lg focus:ring-0 focus:border-0 pl-0 block w-full p-2.5 cursor-pointer dropbtn flex justify-between items-center">
-                                {{ $t('1 adult, Economy') }}
-                                <i class="hidden lg:block fas fa-chevron-down text-[11px] text-black font-bold"></i>
-                            </div>
-
-                            <div v-show="seen"
-                                class="dropdown-content block absolute bg-white w-[100%] rounded-lg shadow-md mt-2 z-10">
-                                <a href="#"
-                                    class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
-                                    <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
-                                    {{ $t('1 adult, Economy') }}
-                                </a>
-                                <div class="h-[1px] w-full bg-[#88909917]"></div>
-
-                                <a href="#"
-                                    class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
-                                    <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
-                                    {{ $t('2 adult, Class') }}
-                                </a>
-                                <div class="h-[1px] w-full bg-[#88909917]"></div>
-
-                                <a href="#"
-                                    class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
-                                    <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
-                                    {{ $t('2 adult, Economy') }}
-                                </a>
-                            </div>
+                    <div>
+                        <div @click="seen = !seen"
+                            class="select bg-white border-none mt-[26px] text-[#7C8DB0] text-sm rounded-lg focus:ring-0 focus:border-0 pl-0 block w-full p-2.5 cursor-pointer dropbtn flex justify-between items-center">
+                            {{ selectedText }}
+                            <i class="hidden lg:block fas fa-chevron-down text-[11px] text-black font-bold"></i>
                         </div>
 
-                    </form>
+                        <div v-show="seen"
+                            class="dropdown-content block absolute w-[226px] bg-white  rounded-lg shadow-md mt-2 z-10">
+
+    <div @click="selectOption('1 adult, Economy')"
+        class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
+        <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
+        {{ $t('1 adult, Economy') }}
+    </div>
+
+    <div @click="selectOption('2 adult, Class')"
+        class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
+        <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
+        {{ $t('2 adult, Class') }}
+    </div>
+
+    <div @click="selectOption('2 adult, Economy')"
+        class="flex text-[#7C8DB0] text-[14px] font-light items-center py-[12px] px-[16px] hover:bg-gray-100">
+        <img src="../../public/img/adult.png" class="w-[18px] h-[18px] mr-2">
+        {{ $t('2 adult, Economy') }}
+    </div>
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
             <div class="flex justify-start lg:justify-center items-center">
@@ -141,10 +144,32 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
+const selectedText = ref('')
+onMounted(() => {
+    console.log('Current locale:', locale.value); 
+    selectedText.value = locale.value === 'ar' ?  '1 adult, Economy'  :'1 بالغ، إقتصادية';
+});
+
+watch(locale, (newLocale) => {
+    selectedText.value = newLocale === 'ar' ? '1 adult, Economy'  : '1 بالغ، إقتصادية';
+});
+
 
 const seen = ref(false)
+
+const selectOption = (option) => {
+    selectedText.value = t(option) 
+    seen.value = false
+}
+
 </script>
+
+
 
 
 <style scoped>
@@ -222,5 +247,4 @@ const seen = ref(false)
     .container-section {
         height: 240px;
     }
-}
-</style>
+}</style>
