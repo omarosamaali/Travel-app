@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^8.5.5",
+    "autoprefixer": "^10.4.20",
+    "flowbite": "^2.5.2",
+    "nuxt": "^3.13.0",
+    "postcss": "^8.4.47",
+    "postcss-rtl": "^2.0.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}
